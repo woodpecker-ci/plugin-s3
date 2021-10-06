@@ -6,7 +6,12 @@ pipeline:
   test:
     image: golang:1.16
     commands:
-      - go test ./...
+      - go test -race -cover ./...
+
+  vet:
+    image: golang:1.16
+    commands:
+      - go vet ./...
 
   build:
     image: golang:1.16
