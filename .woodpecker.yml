@@ -3,17 +3,18 @@ clone:
     image: plugins/git:next
 
 pipeline:
+  lint:
+    image: golang:1.16
+    commands:
+      - make vet
+      - make formatcheck
+
   test:
     image: golang:1.16
     commands:
-      - go test -race -cover ./...
-
-  vet:
-    image: golang:1.16
-    commands:
-      - go vet ./...
+      - make test
 
   build:
     image: golang:1.16
     commands:
-      - go build
+      - make build
