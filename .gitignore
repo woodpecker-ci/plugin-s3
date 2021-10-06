@@ -27,4 +27,4 @@ release/
 vendor/
 
 coverage.out
-drone-s3
+plugin-s3

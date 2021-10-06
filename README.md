@@ -1,4 +1,4 @@
-# drone-s3
+# plugin-s3
 
 [![Build Status](http://cloud.drone.io/api/badges/drone-plugins/drone-s3/status.svg)](http://cloud.drone.io/drone-plugins/drone-s3)
 [![Gitter chat](https://badges.gitter.im/drone/drone.png)](https://gitter.im/drone/drone)
@@ -35,7 +35,7 @@ CGO disabled will result in an error when running the Docker image:
 
 ```
 docker: Error response from daemon: Container command
-'/bin/drone-s3' not found or does not exist..
+'/bin/plugin-s3' not found or does not exist..
 ```
 
 ## Usage

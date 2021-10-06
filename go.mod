@@ -1,4 +1,4 @@
-module github.com/drone-plugins/drone-s3
+module github.com/woodpecker-ci/plugin-s3
 
 go 1.15
 
