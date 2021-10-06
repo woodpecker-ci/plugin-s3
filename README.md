@@ -1,14 +1,27 @@
 # plugin-s3
 
-[![Build Status](http://cloud.drone.io/api/badges/drone-plugins/drone-s3/status.svg)](http://cloud.drone.io/drone-plugins/drone-s3)
-[![Gitter chat](https://badges.gitter.im/drone/drone.png)](https://gitter.im/drone/drone)
-[![Join the discussion at https://discourse.drone.io](https://img.shields.io/badge/discourse-forum-orange.svg)](https://discourse.drone.io)
-[![Drone questions at https://stackoverflow.com](https://img.shields.io/badge/drone-stackoverflow-orange.svg)](https://stackoverflow.com/questions/tagged/drone.io)
-[![](https://images.microbadger.com/badges/image/plugins/s3.svg)](https://microbadger.com/images/plugins/s3 "Get your own image badge on microbadger.com")
-[![Go Doc](https://godoc.org/github.com/drone-plugins/drone-s3?status.svg)](http://godoc.org/github.com/drone-plugins/drone-s3)
-[![Go Report](https://goreportcard.com/badge/github.com/drone-plugins/drone-s3)](https://goreportcard.com/report/github.com/drone-plugins/drone-s3)
+<p align="center">
+  <a href="https://wp.laszlo.cloud/woodpecker-ci/plugin-s3" title="Build Status">
+    <img src="https://wp.laszlo.cloud/api/badges/woodpecker-ci/plugin-s3/status.svg">
+  </a>
+  <a href="https://discord.gg/fcMQqSMXJy" title="Join the Discord chat at https://discord.gg/fcMQqSMXJy">
+    <img src="https://img.shields.io/discord/838698813463724034.svg">
+  </a>
+  <a href="https://goreportcard.com/badge/github.com/woodpecker-ci/plugin-s3" title="Go Report Card">
+    <img src="https://goreportcard.com/badge/github.com/woodpecker-ci/plugin-s3">
+  </a>
+  <a href="https://godoc.org/github.com/woodpecker-ci/plugin-s3" title="GoDoc">
+    <img src="https://godoc.org/github.com/woodpecker-ci/plugin-s3?status.svg">
+  </a>
+  <a href="https://hub.docker.com/r/woodpeckerci/plugin-s3" title="Docker pulls">
+    <img src="https://img.shields.io/docker/pulls/woodpeckerci/plugin-s3">
+  </a>
+  <a href="https://opensource.org/licenses/Apache-2.0" title="License: Apache-2.0">
+    <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg">
+  </a>
+</p>
 
-Drone plugin to publish files and artifacts to Amazon S3 or Minio. For the
+Woodpecker/Drone plugin to publish files and artifacts to Amazon S3 or Minio. For the
 usage information and a listing of the available options please take a look at
 [the docs](http://plugins.drone.io/drone-plugins/drone-s3/).
 
@@ -27,7 +40,7 @@ Build the Docker image with the following commands:
 
 ```
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo
-docker build --rm=true -t plugins/s3 .
+docker build --rm=true -t woodpeckerci/plugin-s3 .
 ```
 
 Please note incorrectly building the image for the correct x64 linux and with
@@ -51,5 +64,5 @@ docker run --rm \
   -e AWS_SECRET_ACCESS_KEY=<secret> \
   -v $(pwd):$(pwd) \
   -w $(pwd) \
-  plugins/s3 --dry-run
+  woodpeckerci/plugin-s3 --dry-run
 ```
