@@ -21,24 +21,19 @@ pipeline:
 
   dryrun:
     image: plugins/docker
-    settings:
-      dockerfile: docker/Dockerfile.linux.amd64
-      dry_run: true
-      repo: woodpeckerci/plugin-s3
-      tags: latest
+    dockerfile: docker/Dockerfile.linux.amd64
+    dry_run: true
+    repo: woodpeckerci/plugin-s3
+    tags: latest
     when:
       event: pull_request
 
   publish:
     image: plugins/docker
-    settings:
-      dockerfile: docker/Dockerfile.linux.amd64
-      repo: woodpeckerci/plugin-s3
-      tags: latest
-      password:
-        from_secret: docker_password
-      username:
-        from_secret: docker_username
+    dockerfile: docker/Dockerfile.linux.amd64
+    repo: woodpeckerci/plugin-s3
+    tags: latest
+    secrets: [ docker_username, docker_password ]
     when:
       branch: master
       event: push
