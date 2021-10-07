@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -9,16 +8,13 @@ import (
 	"github.com/urfave/cli"
 )
 
-var (
-	version = "0.0.0"
-	build   = "0"
-)
+var version = "0.0.0+0"
 
 func main() {
 	app := cli.NewApp()
 	app.Name = "s3 plugin"
 	app.Usage = "s3 plugin"
-	app.Version = fmt.Sprintf("%s+%s", version, build)
+	app.Version = version
 	app.Action = run
 	app.Flags = []cli.Flag{
 		cli.StringFlag{

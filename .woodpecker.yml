@@ -3,17 +3,37 @@ clone:
     image: plugins/git:next
 
 pipeline:
+  lint:
+    image: golang:1.16
+    commands:
+      - make vet
+      - make formatcheck
+
   test:
     image: golang:1.16
     commands:
-      - go test -race -cover ./...
-
-  vet:
-    image: golang:1.16
-    commands:
-      - go vet ./...
+      - make test
 
   build:
     image: golang:1.16
     commands:
-      - go build
+      - make build
+
+  dryrun:
+    image: plugins/docker
+    dockerfile: docker/Dockerfile.linux.amd64
+    dry_run: true
+    repo: woodpeckerci/plugin-s3
+    tags: latest
+    when:
+      event: pull_request
+
+  publish:
+    image: plugins/docker
+    dockerfile: docker/Dockerfile.linux.amd64
+    repo: woodpeckerci/plugin-s3
+    tags: latest
+    secrets: [ docker_username, docker_password ]
+    when:
+      branch: master
+      event: push
