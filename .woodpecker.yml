@@ -20,21 +20,21 @@ pipeline:
       - make build
 
   dryrun:
-    image: plugins/docker:linux-amd64
+    image: plugins/docker
     settings:
       dockerfile: docker/Dockerfile.linux.amd64
       dry_run: true
       repo: woodpeckerci/plugin-s3
-      tags: linux-amd64
+      tags: latest
     when:
       event: pull_request
 
   publish:
-    image: plugins/docker:linux-amd64
+    image: plugins/docker
     settings:
       dockerfile: docker/Dockerfile.linux.amd64
       repo: woodpeckerci/plugin-s3
-      tags: linux-amd64
+      tags: latest
       password:
         from_secret: docker_password
       username:
