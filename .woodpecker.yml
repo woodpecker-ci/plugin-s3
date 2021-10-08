@@ -4,12 +4,14 @@ clone:
 
 pipeline:
   lint:
+    group: test
     image: golang:1.16
     commands:
       - make vet
       - make formatcheck
 
   test:
+    group: test
     image: golang:1.16
     commands:
       - make test
@@ -28,12 +30,21 @@ pipeline:
     when:
       event: pull_request
 
-  publish:
+  publish-next:
     image: plugins/docker
     dockerfile: docker/Dockerfile.linux.amd64
     repo: woodpeckerci/plugin-s3
-    tags: latest
-    secrets: [ docker_username, docker_password ]
+    tags: next
+    secrets: [docker_username, docker_password]
     when:
       branch: master
       event: push
+
+  publish-tag:
+    image: plugins/docker
+    dockerfile: docker/Dockerfile.linux.amd64
+    repo: woodpeckerci/plugin-s3
+    tags: [latest, "${DRONE_TAG}"]
+    secrets: [docker_username, docker_password]
+    when:
+      event: tag
