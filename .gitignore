@@ -26,5 +26,7 @@ _testmain.go
 release/
 vendor/
 
+.vscode
+
 coverage.out
 plugin-s3

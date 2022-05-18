@@ -1,7 +1,3 @@
-clone:
-  git:
-    image: plugins/git:next
-
 pipeline:
   lint:
     group: test
@@ -23,18 +19,20 @@ pipeline:
 
   dryrun:
     image: plugins/docker
-    dockerfile: docker/Dockerfile.linux.amd64
-    dry_run: true
-    repo: woodpeckerci/plugin-s3
-    tags: latest
+    settings:
+      dockerfile: docker/Dockerfile.linux.amd64
+      dry_run: true
+      repo: woodpeckerci/plugin-s3
+      tags: latest
     when:
       event: pull_request
 
   publish-next:
     image: plugins/docker
-    dockerfile: docker/Dockerfile.linux.amd64
-    repo: woodpeckerci/plugin-s3
-    tags: next
+    settings:
+      dockerfile: docker/Dockerfile.linux.amd64
+      repo: woodpeckerci/plugin-s3
+      tags: next
     secrets: [docker_username, docker_password]
     when:
       branch: master
@@ -42,9 +40,10 @@ pipeline:
 
   publish-tag:
     image: plugins/docker
-    dockerfile: docker/Dockerfile.linux.amd64
-    repo: woodpeckerci/plugin-s3
-    tags: [latest, "${DRONE_TAG}"]
+    settings:
+      dockerfile: docker/Dockerfile.linux.amd64
+      repo: woodpeckerci/plugin-s3
+      tags: [latest, "${DRONE_TAG}"]
     secrets: [docker_username, docker_password]
     when:
       event: tag
