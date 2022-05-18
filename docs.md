@@ -7,7 +7,8 @@ tags: [publish, s3, amazon, minio, storage]
 image: woodpeckerci/plugin-s3
 ---
 
-The S3 plugin uploads files and build artifacts to your S3 bucket, or S3-compatible bucket such as Minio. The below pipeline configuration demonstrates simple usage:
+The S3 plugin uploads files and build artifacts to your S3 bucket, or S3-compatible bucket such as Minio.
+The below pipeline configuration demonstrates simple usage:
 
 ```yml
 pipeline:
@@ -42,7 +43,7 @@ pipeline:
     image: woodpeckerci/plugin-s3
     bucket: my-bucket-name
     source: public/**/*
-    target: /target/location/${DRONE_BUILD_NUMBER}
+    target: /target/location/${CI_BUILD_NUMBER}
 ```
 
 Override the default acl and region:
@@ -50,7 +51,7 @@ Override the default acl and region:
 ```yml
 steps:
 - name: upload
-  image: plugins/s3
+  image: woodpeckerci/plugin-s3
   settings:
     bucket: my-bucket-name
     acl: public-read
@@ -118,7 +119,7 @@ acl
 : access to files that are uploaded (`private`, `public-read`, etc)
 
 source
-: source location of the files, using a glob matching pattern. Location must be within the drone workspace.
+: source location of the files, using a glob matching pattern. Location must be within the woodpecker workspace.
 
 target
 : target location of files in the bucket
