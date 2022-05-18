@@ -1,15 +1,21 @@
 GOFILES_NOVENDOR = $(shell find . -type f -name '*.go' -not -path "./vendor/*" -not -path "./.git/*")
 GO_PACKAGES ?= $(shell go list ./... | grep -v /vendor/)
 
+TARGETOS ?= linux
+TARGETARCH ?= amd64
+
 VERSION ?= next
-ifneq ($(DRONE_TAG),)
-	VERSION := $(DRONE_TAG:v%=%)
+VERSION_NUMBER ?= 0.0.0
+ifneq ($(CI_COMMIT_TAG),)
+	VERSION := $(CI_COMMIT_TAG:v%=%)
+	VERSION_NUMBER := ${VERSION}
 endif
 
 # append commit-sha to next version
 BUILD_VERSION := $(VERSION)
 ifeq ($(BUILD_VERSION),next)
-	BUILD_VERSION := $(shell echo "next-$(shell echo ${DRONE_COMMIT_SHA} | head -c 8)")
+	CI_COMMIT_SHA ?= $(shell git rev-parse HEAD)
+	BUILD_VERSION := $(shell echo "next-$(shell echo ${CI_COMMIT_SHA} | head -c 8)")
 endif
 
 LDFLAGS := -s -w -extldflags "-static" -X main.version=${BUILD_VERSION}
@@ -40,12 +46,7 @@ test:
 	go test -race -cover ./...
 
 build:
-	GOOS=linux   GOARCH=amd64 CGO_ENABLED=0 go build -ldflags '${LDFLAGS}' -o release/linux/amd64/plugin-s3
-	GOOS=linux   GOARCH=arm64 CGO_ENABLED=0 go build -ldflags '${LDFLAGS}' -o release/linux/arm64/plugin-s3
-	GOOS=linux   GOARCH=arm   CGO_ENABLED=0 go build -ldflags '${LDFLAGS}' -o release/linux/arm/plugin-s3
-	GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -ldflags '${LDFLAGS}' -o release/windows/amd64/plugin-s3
-	GOOS=darwin  GOARCH=amd64 CGO_ENABLED=0 go build -ldflags '${LDFLAGS}' -o release/darwin/amd64/plugin-s3
-	GOOS=darwin  GOARCH=arm64 CGO_ENABLED=0 go build -ldflags '${LDFLAGS}' -o release/darwin/arm64/plugin-s3
+	CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -ldflags '${LDFLAGS}' -o release/plugin-s3
 
 .PHONY: version
 version:
