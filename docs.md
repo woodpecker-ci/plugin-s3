@@ -76,7 +76,7 @@ pipeline:
       strip_prefix: public/
 ```
 
-Configure the plugin to exclude files from upload:
+Configure the plugin to exclude files from upload and compress:
 
 ```yml
 pipeline:
@@ -88,6 +88,7 @@ pipeline:
       target: /target/location
       exclude:
         - **/*.xml
+      compress: true
 ```
 
 Configure the plugin to connect to a Minio server:
@@ -141,3 +142,6 @@ exclude
 
 path_style
 : whether path style URLs should be used (true for minio)
+
+compress
+: prior to upload, compress files and use gzip content-encoding (false by default)
