@@ -1,11 +1,8 @@
 # plugin-s3
 
 <p align="center">
-  <a href="https://wp.laszlo.cloud/woodpecker-ci/plugin-s3" title="Build Status">
-    <img src="https://wp.laszlo.cloud/api/badges/woodpecker-ci/plugin-s3/status.svg">
-  </a>
-  <a href="https://discord.gg/fcMQqSMXJy" title="Join the Discord chat at https://discord.gg/fcMQqSMXJy">
-    <img src="https://img.shields.io/discord/838698813463724034.svg">
+  <a href="https://ci.woodpecker-ci.org/woodpecker-ci/plugin-s3" title="Build Status">
+    <img src="https://ci.woodpecker-ci.org/api/badges/woodpecker-ci/plugin-s3/status.svg">
   </a>
   <a href="https://goreportcard.com/badge/github.com/woodpecker-ci/plugin-s3" title="Go Report Card">
     <img src="https://goreportcard.com/badge/github.com/woodpecker-ci/plugin-s3">
@@ -22,8 +19,9 @@
 </p>
 
 Woodpecker/Drone plugin to publish files and artifacts to Amazon S3 or Minio. For the
-usage information and a listing of the available options please take a look at
-[the docs](http://plugins.drone.io/drone-plugins/drone-s3/).
+usage information and a listing of the available options please take a look at:
+- https://woodpecker-ci.org/plugins/plugin-s3
+- https://plugins.drone.io/plugins/s3
 
 ## Build
 
