@@ -226,7 +226,7 @@ func (p *Plugin) Exec() error {
 				return err
 			}
 			//wrap with gzip
-			putObjectInput.Body = &gzipReadSeeker{f, gr}
+			putObjectInput.Body = &gzipReadSeeker{rs: f, z: gr}
 			//set encoding
 			putObjectInput.ContentEncoding = aws.String("gzip")
 		} else {
