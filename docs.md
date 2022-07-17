@@ -14,11 +14,12 @@ The below pipeline configuration demonstrates simple usage:
 pipeline:
   upload:
     image: woodpeckerci/plugin-s3
-    bucket: my-bucket-name
-    access_key: a50d28f4dd477bc184fbd10b376de753
-    secret_key: bc5785d3ece6a9cdefa42eb99b58986f9095ff1c
-    source: public/**/*
-    target: /target/location
+    settings:
+      bucket: my-bucket-name
+      access_key: a50d28f4dd477bc184fbd10b376de753
+      secret_key: bc5785d3ece6a9cdefa42eb99b58986f9095ff1c
+      source: public/**/*
+      target: /target/location
 ```
 
 Source the aws credentials from secrets:
@@ -27,12 +28,13 @@ Source the aws credentials from secrets:
 pipeline:
   upload:
     image: woodpeckerci/plugin-s3
-    secrets: [aws_access_key_id, aws_secret_access_key]
-    bucket: my-bucket-name
-    access_key: $aws_access_key_id
-    secret_key: $aws_secret_access_key
-    source: public/**/*
-    target: /target/location
+    settings:
+      secrets: [aws_access_key_id, aws_secret_access_key]
+      bucket: my-bucket-name
+      access_key: $aws_access_key_id
+      secret_key: $aws_secret_access_key
+      source: public/**/*
+      target: /target/location
 ```
 
 Use the build number in the S3 target prefix:
@@ -41,9 +43,10 @@ Use the build number in the S3 target prefix:
 pipeline:
   upload:
     image: woodpeckerci/plugin-s3
-    bucket: my-bucket-name
-    source: public/**/*
-    target: /target/location/${CI_BUILD_NUMBER}
+    settings:
+      bucket: my-bucket-name
+      source: public/**/*
+      target: /target/location/${CI_BUILD_NUMBER}
 ```
 
 Override the default acl and region:
@@ -66,10 +69,11 @@ Configure the plugin to strip path prefixes when uploading:
 pipeline:
   upload:
     image: woodpeckerci/plugin-s3
-    bucket: my-bucket-name
-    source: public/**/*
-    target: /target/location
-    strip_prefix: public/
+    settings:
+      bucket: my-bucket-name
+      source: public/**/*
+      target: /target/location
+      strip_prefix: public/
 ```
 
 Configure the plugin to exclude files from upload:
@@ -78,11 +82,12 @@ Configure the plugin to exclude files from upload:
 pipeline:
   upload:
     image: woodpeckerci/plugin-s3
-    bucket: my-bucket-name
-    source: public/**/*
-    target: /target/location
-    exclude:
-      - **/*.xml
+    settings:
+      bucket: my-bucket-name
+      source: public/**/*
+      target: /target/location
+      exclude:
+        - **/*.xml
 ```
 
 Configure the plugin to connect to a Minio server:
@@ -91,11 +96,12 @@ Configure the plugin to connect to a Minio server:
 pipeline:
   upload:
     image: woodpeckerci/plugin-s3
-    bucket: my-bucket-name
-    source: public/**/*
-    target: /target/location
-    path_style: true
-    endpoint: https://play.minio.io:9000
+    settings:
+      bucket: my-bucket-name
+      source: public/**/*
+      target: /target/location
+      path_style: true
+      endpoint: https://play.minio.io:9000
 ```
 
 # Parameter Reference
