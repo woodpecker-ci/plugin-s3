@@ -123,6 +123,11 @@ func main() {
 			Name:  "env-file",
 			Usage: "source env file",
 		},
+		cli.BoolFlag{
+			Name:   "compress",
+			Usage:  "prior to upload, compress files and use gzip content-encoding",
+			EnvVar: "PLUGIN_COMPRESS",
+		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
@@ -155,6 +160,7 @@ func run(c *cli.Context) error {
 		StorageClass:          c.String("storage-class"),
 		PathStyle:             c.Bool("path-style"),
 		DryRun:                c.Bool("dry-run"),
+		Compress:              c.Bool("compress"),
 	}
 
 	return plugin.Exec()
