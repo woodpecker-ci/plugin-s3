@@ -17,7 +17,7 @@ pipeline:
     settings:
       bucket: my-bucket-name
       access_key: a50d28f4dd477bc184fbd10b376de753
-      secret_key: bc5785d3ece6a9cdefa42eb99b58986f9095ff1c
+      secret_key: ****************************************
       source: public/**/*
       target: /target/location
 ```
@@ -29,10 +29,11 @@ pipeline:
   upload:
     image: woodpeckerci/plugin-s3
     settings:
-      secrets: [aws_access_key_id, aws_secret_access_key]
       bucket: my-bucket-name
-      access_key: $aws_access_key_id
-      secret_key: $aws_secret_access_key
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
       source: public/**/*
       target: /target/location
 ```
