@@ -7,6 +7,7 @@
   <a href="https://goreportcard.com/badge/github.com/woodpecker-ci/plugin-s3" title="Go Report Card">
     <img src="https://goreportcard.com/badge/github.com/woodpecker-ci/plugin-s3">
   </a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fwoodpecker-ci%2Fplugin-s3?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwoodpecker-ci%2Fplugin-s3.svg?type=shield"/></a>
   <a href="https://godoc.org/github.com/woodpecker-ci/plugin-s3" title="GoDoc">
     <img src="https://godoc.org/github.com/woodpecker-ci/plugin-s3?status.svg">
   </a>
