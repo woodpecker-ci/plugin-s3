@@ -24,9 +24,6 @@ usage information and a listing of the available options please take a look at:
 - https://woodpecker-ci.org/plugins/plugin-s3
 - https://plugins.drone.io/plugins/s3
 
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwoodpecker-ci%2Fplugin-s3.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwoodpecker-ci%2Fplugin-s3?ref=badge_large)
-
 ## Build
 
 Build the binary with the following commands:
