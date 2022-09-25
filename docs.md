@@ -4,7 +4,8 @@ authors: Woodpecker Authors
 icon: https://woodpecker-ci.org/img/logo.svg
 description: Plugin to publish files and artifacts to Amazon S3 or Minio.
 tags: [publish, s3, amazon, minio, storage]
-image: woodpeckerci/plugin-s3
+containerImage: woodpeckerci/plugin-s3
+containerImageUrl: https://hub.docker.com/r/woodpeckerci/plugin-s3
 ---
 
 The S3 plugin uploads files and build artifacts to your S3 bucket, or S3-compatible bucket such as Minio.
