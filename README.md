@@ -21,7 +21,7 @@
 
 Woodpecker/Drone plugin to publish files and artifacts to Amazon S3 or Minio. For the
 usage information and a listing of the available options please take a look at:
-- https://woodpecker-ci.org/plugins/plugin-s3
+- https://woodpecker-ci.org/plugins/S3%20Plugin
 - https://plugins.drone.io/plugins/s3
 
 ## Build
