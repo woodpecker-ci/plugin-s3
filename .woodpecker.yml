@@ -1,14 +1,17 @@
-pipeline:
+variables:
+  - &golang 'golang:1.20'
+
+steps:
   lint:
     group: test
-    image: golang:1.17
+    image: *golang
     commands:
       - make vet
       - make formatcheck
 
   test:
     group: test
-    image: golang:1.17
+    image: *golang
     commands:
       - make test
 
@@ -21,6 +24,7 @@ pipeline:
       tags: latest
       platforms: linux/arm/v7,linux/arm64/v8,linux/amd64,linux/ppc64le,windows/amd64,darwin/amd64,darwin/arm64,freebsd/arm64,freebsd/amd64,openbsd/arm64,openbsd/amd64
     when:
+      branch: ${CI_REPO_DEFAULT_BRANCH}
       event: pull_request
 
   publish-next:
@@ -32,7 +36,7 @@ pipeline:
       platforms: linux/arm/v7,linux/arm64/v8,linux/amd64,linux/ppc64le,windows/amd64,darwin/amd64,darwin/arm64,freebsd/arm64,freebsd/amd64,openbsd/arm64,openbsd/amd64
     secrets: [docker_username, docker_password]
     when:
-      branch: master
+      branch: ${CI_REPO_DEFAULT_BRANCH}
       event: push
 
   publish-tag:
