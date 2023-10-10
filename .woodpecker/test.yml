@@ -2,8 +2,10 @@ variables:
   - &golang 'golang:1.21'
 
 when:
-  branch: ${CI_REPO_DEFAULT_BRANCH}
-  event: pull_request
+  - event: pull_request
+  - event: push
+    branch:
+      - ${CI_REPO_DEFAULT_BRANCH}
 
 steps:
   lint:
