@@ -2,33 +2,8 @@ variables:
   - &golang 'golang:1.21'
 
 steps:
-  lint:
-    group: test
-    image: *golang
-    commands:
-      - make vet
-      - make formatcheck
-
-  test:
-    group: test
-    image: *golang
-    commands:
-      - make test
-
-  build:
-    image: woodpeckerci/plugin-docker-buildx
-    settings:
-      dockerfile: Dockerfile.multiarch
-      dry_run: true
-      repo: woodpeckerci/plugin-s3
-      tags: latest
-      platforms: linux/arm/v7,linux/arm64/v8,linux/amd64,linux/ppc64le,windows/amd64,darwin/amd64,darwin/arm64,freebsd/arm64,freebsd/amd64,openbsd/arm64,openbsd/amd64
-    when:
-      branch: ${CI_REPO_DEFAULT_BRANCH}
-      event: pull_request
-
   publish-next:
-    image: woodpeckerci/plugin-docker-buildx
+    image: woodpeckerci/plugin-docker-buildx:2.1.0
     settings:
       dockerfile: Dockerfile.multiarch
       repo: woodpeckerci/plugin-s3
@@ -40,7 +15,7 @@ steps:
       event: push
 
   publish-tag:
-    image: woodpeckerci/plugin-docker-buildx
+    image: woodpeckerci/plugin-docker-buildx:2.1.0
     settings:
       dockerfile: Dockerfile.multiarch
       repo: woodpeckerci/plugin-s3
