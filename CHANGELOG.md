@@ -16,6 +16,7 @@
 
 ### Misc
 
+- chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v2.2.0 [[#42](https://github.com/woodpecker-ci/plugin-s3/pull/42)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.46.3 [[#40](https://github.com/woodpecker-ci/plugin-s3/pull/40)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.46.2 [[#39](https://github.com/woodpecker-ci/plugin-s3/pull/39)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.46.1 [[#38](https://github.com/woodpecker-ci/plugin-s3/pull/38)]
