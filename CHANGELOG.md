@@ -16,6 +16,7 @@
 
 ### Misc
 
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v0.7.0 [[#51](https://github.com/woodpecker-ci/plugin-s3/pull/51)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.47.2 [[#50](https://github.com/woodpecker-ci/plugin-s3/pull/50)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.47.1 [[#49](https://github.com/woodpecker-ci/plugin-s3/pull/49)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.47.0 [[#48](https://github.com/woodpecker-ci/plugin-s3/pull/48)]
