@@ -1,10 +1,10 @@
 # Changelog
 
-## [1.1.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.1) - 2023-11-04
+## [1.1.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.1) - 2023-11-05
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@renovate[bot], @pat-s, @mscherer, @qwerty287, @fossabot, @6543, @rosariop
+@pat-s, @renovate[bot], @mscherer, @qwerty287, @fossabot, @6543, @rosariop
 
 ### 📚 Documentation
 
@@ -16,6 +16,7 @@
 
 ### Misc
 
+- Renovate: use org config [[#45](https://github.com/woodpecker-ci/plugin-s3/pull/45)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.47.3 [[#52](https://github.com/woodpecker-ci/plugin-s3/pull/52)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v0.7.0 [[#51](https://github.com/woodpecker-ci/plugin-s3/pull/51)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.47.2 [[#50](https://github.com/woodpecker-ci/plugin-s3/pull/50)]
