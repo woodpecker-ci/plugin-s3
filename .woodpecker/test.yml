@@ -6,6 +6,7 @@ when:
   - event: push
     branch:
       - ${CI_REPO_DEFAULT_BRANCH}
+      - "renovate/*"
 
 steps:
   lint:
