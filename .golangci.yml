@@ -36,16 +36,3 @@ linters:
 
 run:
   timeout: 5m
-
-issues:
-  exclude-rules:
-    # gin force us to use string as context key
-    - path: server/store/context.go
-      linters:
-        - staticcheck
-        - revive
-
-    # let cli use print and panic
-    - path: 'cmd/*|cli/*'
-      linters:
-        - forbidigo
