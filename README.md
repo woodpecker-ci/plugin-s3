@@ -21,14 +21,15 @@
 
 Woodpecker/Drone plugin to publish files and artifacts to Amazon S3 or Minio. For the
 usage information and a listing of the available options please take a look at:
-- https://woodpecker-ci.org/plugins/S3%20Plugin
-- https://plugins.drone.io/plugins/s3
+
+- <https://woodpecker-ci.org/plugins/S3%20Plugin>
+- <https://plugins.drone.io/plugins/s3>
 
 ## Build
 
 Build the binary with the following commands:
 
-```
+```sh
 go build
 go test
 ```
@@ -37,7 +38,7 @@ go test
 
 Build the Docker image with the following commands:
 
-```
+```sh
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo
 docker build --rm=true -t woodpeckerci/plugin-s3 .
 ```
@@ -45,7 +46,7 @@ docker build --rm=true -t woodpeckerci/plugin-s3 .
 Please note incorrectly building the image for the correct x64 linux and with
 CGO disabled will result in an error when running the Docker image:
 
-```
+```sh
 docker: Error response from daemon: Container command
 '/bin/plugin-s3' not found or does not exist..
 ```
@@ -54,7 +55,7 @@ docker: Error response from daemon: Container command
 
 Execute from the working directory:
 
-```
+```sh
 docker run --rm \
   -e PLUGIN_SOURCE=<source> \
   -e PLUGIN_TARGET=<target> \
