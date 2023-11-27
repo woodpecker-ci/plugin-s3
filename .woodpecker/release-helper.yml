@@ -1,6 +1,6 @@
 steps:
   release-helper:
-    image: woodpeckerci/plugin-ready-release-go:1.0.0
+    image: woodpeckerci/plugin-ready-release-go:1.0.3
     settings:
       release_branch: ${CI_REPO_DEFAULT_BRANCH}
       forge_type: github
