@@ -8,6 +8,7 @@
 
 ### Misc
 
+- Renovate: run tests on renovate/ branches [[#53](https://github.com/woodpecker-ci/plugin-s3/pull/53)]
 - Add precommit [[#54](https://github.com/woodpecker-ci/plugin-s3/pull/54)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.0.3 [[#62](https://github.com/woodpecker-ci/plugin-s3/pull/62)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.48.3 [[#61](https://github.com/woodpecker-ci/plugin-s3/pull/61)]
