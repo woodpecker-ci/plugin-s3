@@ -11,7 +11,7 @@ variables:
 
 steps:
   publish-next:
-    image: woodpeckerci/plugin-docker-buildx:2.2.0
+    image: woodpeckerci/plugin-docker-buildx:2.2.1
     settings:
       dockerfile: Dockerfile.multiarch
       repo: woodpeckerci/plugin-s3
@@ -23,7 +23,7 @@ steps:
       event: push
 
   publish-tag:
-    image: woodpeckerci/plugin-docker-buildx:2.2.0
+    image: woodpeckerci/plugin-docker-buildx:2.2.1
     settings:
       dockerfile: Dockerfile.multiarch
       repo: woodpeckerci/plugin-s3

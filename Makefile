@@ -20,6 +20,7 @@ endif
 
 LDFLAGS := -s -w -extldflags "-static" -X main.version=${BUILD_VERSION}
 
+.PHONY: all
 all: build
 
 vendor:
@@ -42,6 +43,7 @@ vet:
 	@echo "Running go vet..."
 	@go vet $(GO_PACKAGES)
 
+.PHONY: test
 test:
 	go test -race -cover ./...
 
