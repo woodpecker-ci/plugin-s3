@@ -3,11 +3,11 @@ module github.com/woodpecker-ci/plugin-s3
 go 1.21
 
 require (
-	github.com/aws/aws-sdk-go v1.48.3
+	github.com/aws/aws-sdk-go v1.48.11
 	github.com/joho/godotenv v1.5.1
 	github.com/mattn/go-zglob v0.0.4
 	github.com/sirupsen/logrus v1.9.3
-	github.com/urfave/cli/v2 v2.25.7
+	github.com/urfave/cli/v2 v2.26.0
 )
 
 require (
