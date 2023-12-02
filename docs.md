@@ -9,6 +9,8 @@ containerImageUrl: https://hub.docker.com/r/woodpeckerci/plugin-s3
 url: https://github.com/woodpecker-ci/plugin-s3
 ---
 
+# S3 Plugin
+
 The S3 plugin uploads files and build artifacts to your S3 bucket, or S3-compatible bucket such as Minio.
 The below pipeline configuration demonstrates simple usage:
 
@@ -107,7 +109,7 @@ pipeline:
       endpoint: https://play.minio.io:9000
 ```
 
-# Parameter Reference
+## Parameter Reference
 
 endpoint
 : custom endpoint URL (optional, to use a S3 compatible non-Amazon service)
