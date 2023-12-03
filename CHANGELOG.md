@@ -1,13 +1,14 @@
 # Changelog
 
-## [1.1.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.2) - 2023-12-02
+## [1.1.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.2) - 2023-12-03
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s, @renovate[bot]
+@renovate[bot], @pat-s
 
 ### Misc
 
+- fix(deps): update golang deps non-major [[#63](https://github.com/woodpecker-ci/plugin-s3/pull/63)]
 - Renovate: run tests on renovate/ branches [[#53](https://github.com/woodpecker-ci/plugin-s3/pull/53)]
 - Add precommit [[#54](https://github.com/woodpecker-ci/plugin-s3/pull/54)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.0.3 [[#62](https://github.com/woodpecker-ci/plugin-s3/pull/62)]
