@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.1.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.2) - 2023-12-31
+
+### ❤️ Thanks to all contributors! ❤️
+
+@renovate[bot], @pat-s
+
+### Misc
+
+- fix(deps): update module github.com/urfave/cli/v2 to v2.27.1 [[#76](https://github.com/woodpecker-ci/plugin-s3/pull/76)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.49.13 [[#75](https://github.com/woodpecker-ci/plugin-s3/pull/75)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.49.11 [[#74](https://github.com/woodpecker-ci/plugin-s3/pull/74)]
+- fix(deps): update golang deps non-major [[#73](https://github.com/woodpecker-ci/plugin-s3/pull/73)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.49.9 [[#72](https://github.com/woodpecker-ci/plugin-s3/pull/72)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.49.8 [[#71](https://github.com/woodpecker-ci/plugin-s3/pull/71)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.49.6 [[#70](https://github.com/woodpecker-ci/plugin-s3/pull/70)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.49.5 [[#69](https://github.com/woodpecker-ci/plugin-s3/pull/69)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.49.4 [[#68](https://github.com/woodpecker-ci/plugin-s3/pull/68)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.49.1 [[#67](https://github.com/woodpecker-ci/plugin-s3/pull/67)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.48.16 [[#66](https://github.com/woodpecker-ci/plugin-s3/pull/66)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.48.14 [[#65](https://github.com/woodpecker-ci/plugin-s3/pull/65)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.48.13 [[#64](https://github.com/woodpecker-ci/plugin-s3/pull/64)]
+- fix(deps): update golang deps non-major [[#63](https://github.com/woodpecker-ci/plugin-s3/pull/63)]
+- Renovate: run tests on renovate/ branches [[#53](https://github.com/woodpecker-ci/plugin-s3/pull/53)]
+- Add precommit [[#54](https://github.com/woodpecker-ci/plugin-s3/pull/54)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.0.3 [[#62](https://github.com/woodpecker-ci/plugin-s3/pull/62)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.48.3 [[#61](https://github.com/woodpecker-ci/plugin-s3/pull/61)]
+- chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v2.2.1 [[#59](https://github.com/woodpecker-ci/plugin-s3/pull/59)]
+
 ## [1.1.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.1) - 2023-11-19
 
 ### ❤️ Thanks to all contributors! ❤️
