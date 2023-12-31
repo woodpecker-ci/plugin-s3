@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.2) - 2023-12-30
+## [1.1.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.2) - 2023-12-31
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,7 @@
 
 ### Misc
 
+- fix(deps): update module github.com/urfave/cli/v2 to v2.27.1 [[#76](https://github.com/woodpecker-ci/plugin-s3/pull/76)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.49.13 [[#75](https://github.com/woodpecker-ci/plugin-s3/pull/75)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.49.11 [[#74](https://github.com/woodpecker-ci/plugin-s3/pull/74)]
 - fix(deps): update golang deps non-major [[#73](https://github.com/woodpecker-ci/plugin-s3/pull/73)]
