@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.3](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.3) - 2024-01-01
+
+### ❤️ Thanks to all contributors! ❤️
+
+@pre-commit-ci[bot]
+
+### Misc
+
+- [pre-commit.ci] pre-commit autoupdate [[#77](https://github.com/woodpecker-ci/plugin-s3/pull/77)]
+
 ## [1.1.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.2) - 2023-12-31
 
 ### ❤️ Thanks to all contributors! ❤️
