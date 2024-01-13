@@ -1,10 +1,14 @@
 # Changelog
 
-## [1.1.3](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.3) - 2024-01-12
+## [1.1.3](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.3) - 2024-01-13
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@renovate[bot], @pre-commit-ci[bot]
+@qwerty287, @renovate[bot], @pre-commit-ci[bot]
+
+### 📚 Documentation
+
+- Add icon [[#86](https://github.com/woodpecker-ci/plugin-s3/pull/86)]
 
 ### Misc
 
