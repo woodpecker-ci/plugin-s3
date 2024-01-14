@@ -4,10 +4,11 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@renovate[bot], @qwerty287, @pre-commit-ci[bot]
+@qwerty287, @renovate[bot], @pre-commit-ci[bot]
 
 ### 📚 Documentation
 
+- Fix author key [[#88](https://github.com/woodpecker-ci/plugin-s3/pull/88)]
 - Add icon [[#86](https://github.com/woodpecker-ci/plugin-s3/pull/86)]
 
 ### Misc
