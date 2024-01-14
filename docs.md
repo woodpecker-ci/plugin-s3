@@ -1,6 +1,6 @@
 ---
 name: S3 Plugin
-authors: Woodpecker Authors
+author: Woodpecker Authors
 icon: https://raw.githubusercontent.com/woodpecker-ci/plugin-s3/main/s3.svg
 description: Plugin to publish files and artifacts to Amazon S3 or Minio.
 tags: [publish, s3, amazon, minio, storage]
