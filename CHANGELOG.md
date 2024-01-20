@@ -4,7 +4,7 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@qwerty287, @renovate[bot], @pre-commit-ci[bot]
+@renovate[bot], @qwerty287, @pre-commit-ci[bot]
 
 ### 📚 Documentation
 
@@ -13,6 +13,7 @@
 
 ### Misc
 
+- chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v3 [[#93](https://github.com/woodpecker-ci/plugin-s3/pull/93)]
 - Use cleartext username [[#92](https://github.com/woodpecker-ci/plugin-s3/pull/92)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.49.24 [[#91](https://github.com/woodpecker-ci/plugin-s3/pull/91)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.49.23 [[#90](https://github.com/woodpecker-ci/plugin-s3/pull/90)]
