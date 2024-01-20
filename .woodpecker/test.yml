@@ -23,7 +23,7 @@ steps:
       - make test
 
   build:
-    image: woodpeckerci/plugin-docker-buildx:2.3.0
+    image: woodpeckerci/plugin-docker-buildx:3.0.0
     settings:
       dockerfile: Dockerfile.multiarch
       dry_run: true
