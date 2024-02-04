@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.3](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.3) - 2024-02-02
+## [1.1.3](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.3) - 2024-02-04
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -13,6 +13,7 @@
 
 ### Misc
 
+- chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v3.0.1 [[#101](https://github.com/woodpecker-ci/plugin-s3/pull/101)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.50.9 [[#100](https://github.com/woodpecker-ci/plugin-s3/pull/100)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.50.7 [[#99](https://github.com/woodpecker-ci/plugin-s3/pull/99)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.1.0 [[#98](https://github.com/woodpecker-ci/plugin-s3/pull/98)]
