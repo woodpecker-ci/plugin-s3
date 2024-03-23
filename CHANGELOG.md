@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.3](https://github.com/woodpecker-ci/plugin-s3/releases/tag/1.1.3) - 2024-03-22
+## [1.1.3](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.1.3) - 2024-03-22
 
 ### ❤️ Thanks to all contributors! ❤️
 
