@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.1.4](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.1.4) - 2024-04-25
+## [1.1.4](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.1.4) - 2024-04-26
 
 ### Misc
 
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.51.29 [[#151](https://github.com/woodpecker-ci/plugin-s3/pull/151)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.51.28 [[#150](https://github.com/woodpecker-ci/plugin-s3/pull/150)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.51.26 [[#149](https://github.com/woodpecker-ci/plugin-s3/pull/149)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.51.25 [[#148](https://github.com/woodpecker-ci/plugin-s3/pull/148)]
