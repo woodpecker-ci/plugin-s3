@@ -20,7 +20,7 @@ steps:
 
   build:
     image: woodpeckerci/plugin-docker-buildx:4.0.0
-    depends_on: [ steps, test ]
+    depends_on: [ lint, test ]
     settings:
       dockerfile: Dockerfile.multiarch
       dry_run: true
