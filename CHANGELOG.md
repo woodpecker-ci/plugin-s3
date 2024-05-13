@@ -8,6 +8,7 @@
 
 ### Misc
 
+- Use `depends_on` [[#165](https://github.com/woodpecker-ci/plugin-s3/pull/165)]
 - Ignore golangci-lint in pre-commit.ci [[#164](https://github.com/woodpecker-ci/plugin-s3/pull/164)]
 - chore(deps): update pre-commit hook golangci/golangci-lint to v1.58.1 [[#163](https://github.com/woodpecker-ci/plugin-s3/pull/163)]
 - chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v4 [[#162](https://github.com/woodpecker-ci/plugin-s3/pull/162)]
