@@ -4,26 +4,23 @@ variables:
 when:
   - event: pull_request
   - event: push
-    branch:
-      - ${CI_REPO_DEFAULT_BRANCH}
-      - "renovate/*"
+    branch: "renovate/*"
 
 steps:
   lint:
-    group: test
     image: *golang
     commands:
       - make vet
       - make formatcheck
 
   test:
-    group: test
     image: *golang
     commands:
       - make test
 
   build:
     image: woodpeckerci/plugin-docker-buildx:4.0.0
+    depends_on: [ lint, test ]
     settings:
       dockerfile: Dockerfile.multiarch
       dry_run: true
