@@ -1,13 +1,21 @@
 module github.com/woodpecker-ci/plugin-s3
 
-go 1.15
+go 1.21
 
 require (
-	github.com/aws/aws-sdk-go v1.40.57
-	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
-	github.com/joho/godotenv v1.4.0
-	github.com/mattn/go-zglob v0.0.3
-	github.com/sirupsen/logrus v1.8.1
-	github.com/urfave/cli v1.22.5
-	golang.org/x/sys v0.0.0-20211006225509-1a26e0398eed // indirect
+	github.com/aws/aws-sdk-go v1.53.19
+	github.com/joho/godotenv v1.5.1
+	github.com/mattn/go-zglob v0.0.4
+	github.com/sirupsen/logrus v1.9.3
+	github.com/urfave/cli/v2 v2.27.2
+)
+
+require (
+	github.com/cpuguy83/go-md2man/v2 v2.0.4 // indirect
+	github.com/jmespath/go-jmespath v0.4.0 // indirect
+	github.com/russross/blackfriday/v2 v2.1.0 // indirect
+	github.com/stretchr/testify v1.8.4 // indirect
+	github.com/xrash/smetrics v0.0.0-20240312152122-5f08fbb34913 // indirect
+	golang.org/x/sys v0.1.0 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
 )

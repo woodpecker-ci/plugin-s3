@@ -1,0 +1,29 @@
+variables:
+  - &golang 'golang:1.22'
+
+when:
+  - event: pull_request
+  - event: push
+    branch: "renovate/*"
+
+steps:
+  lint:
+    image: *golang
+    commands:
+      - make vet
+      - make formatcheck
+
+  test:
+    image: *golang
+    commands:
+      - make test
+
+  build:
+    image: woodpeckerci/plugin-docker-buildx:4.0.0
+    depends_on: [ lint, test ]
+    settings:
+      dockerfile: Dockerfile.multiarch
+      dry_run: true
+      repo: woodpeckerci/plugin-s3
+      tags: latest
+      platforms: linux/arm/v7,linux/arm64/v8,linux/amd64,linux/ppc64le,windows/amd64,darwin/amd64,darwin/arm64,freebsd/arm64,freebsd/amd64,openbsd/arm64,openbsd/amd64

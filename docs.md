@@ -1,11 +1,15 @@
 ---
 name: S3 Plugin
-authors: Woodpecker Authors
-icon: https://woodpecker-ci.org/img/logo.svg
+author: Woodpecker Authors
+icon: https://raw.githubusercontent.com/woodpecker-ci/plugin-s3/main/s3.svg
 description: Plugin to publish files and artifacts to Amazon S3 or Minio.
 tags: [publish, s3, amazon, minio, storage]
-image: woodpeckerci/plugin-s3
+containerImage: woodpeckerci/plugin-s3
+containerImageUrl: https://hub.docker.com/r/woodpeckerci/plugin-s3
+url: https://github.com/woodpecker-ci/plugin-s3
 ---
+
+# S3 Plugin
 
 The S3 plugin uploads files and build artifacts to your S3 bucket, or S3-compatible bucket such as Minio.
 The below pipeline configuration demonstrates simple usage:
@@ -17,7 +21,7 @@ pipeline:
     settings:
       bucket: my-bucket-name
       access_key: a50d28f4dd477bc184fbd10b376de753
-      secret_key: bc5785d3ece6a9cdefa42eb99b58986f9095ff1c
+      secret_key: ****************************************
       source: public/**/*
       target: /target/location
 ```
@@ -29,10 +33,11 @@ pipeline:
   upload:
     image: woodpeckerci/plugin-s3
     settings:
-      secrets: [aws_access_key_id, aws_secret_access_key]
       bucket: my-bucket-name
-      access_key: $aws_access_key_id
-      secret_key: $aws_secret_access_key
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
       source: public/**/*
       target: /target/location
 ```
@@ -105,7 +110,7 @@ pipeline:
       endpoint: https://play.minio.io:9000
 ```
 
-# Parameter Reference
+## Parameter Reference
 
 endpoint
 : custom endpoint URL (optional, to use a S3 compatible non-Amazon service)

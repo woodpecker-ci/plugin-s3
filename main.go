@@ -5,7 +5,7 @@ import (
 
 	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
-	"github.com/urfave/cli"
+	"github.com/urfave/cli/v2"
 )
 
 var version = "0.0.0+0"
@@ -17,109 +17,109 @@ func main() {
 	app.Version = version
 	app.Action = run
 	app.Flags = []cli.Flag{
-		cli.StringFlag{
-			Name:   "endpoint",
-			Usage:  "endpoint for the s3 connection",
-			EnvVar: "PLUGIN_ENDPOINT,S3_ENDPOINT",
+		&cli.StringFlag{
+			Name:    "endpoint",
+			Usage:   "endpoint for the s3 connection",
+			EnvVars: []string{"PLUGIN_ENDPOINT,S3_ENDPOINT"},
 		},
-		cli.StringFlag{
-			Name:   "access-key",
-			Usage:  "aws access key",
-			EnvVar: "PLUGIN_ACCESS_KEY,AWS_ACCESS_KEY_ID",
+		&cli.StringFlag{
+			Name:    "access-key",
+			Usage:   "aws access key",
+			EnvVars: []string{"PLUGIN_ACCESS_KEY,AWS_ACCESS_KEY_ID"},
 		},
-		cli.StringFlag{
-			Name:   "secret-key",
-			Usage:  "aws secret key",
-			EnvVar: "PLUGIN_SECRET_KEY,AWS_SECRET_ACCESS_KEY",
+		&cli.StringFlag{
+			Name:    "secret-key",
+			Usage:   "aws secret key",
+			EnvVars: []string{"PLUGIN_SECRET_KEY,AWS_SECRET_ACCESS_KEY"},
 		},
-		cli.StringFlag{
-			Name:   "assume-role",
-			Usage:  "aws iam role to assume",
-			EnvVar: "PLUGIN_ASSUME_ROLE,ASSUME_ROLE",
+		&cli.StringFlag{
+			Name:    "assume-role",
+			Usage:   "aws iam role to assume",
+			EnvVars: []string{"PLUGIN_ASSUME_ROLE,ASSUME_ROLE"},
 		},
-		cli.StringFlag{
-			Name:   "assume-role-session-name",
-			Usage:  "aws iam role session name to assume",
-			Value:  "woodpecker-s3",
-			EnvVar: "PLUGIN_ASSUME_ROLE_SESSION_NAME,ASSUME_ROLE_SESSION_NAME",
+		&cli.StringFlag{
+			Name:    "assume-role-session-name",
+			Usage:   "aws iam role session name to assume",
+			Value:   "woodpecker-s3",
+			EnvVars: []string{"PLUGIN_ASSUME_ROLE_SESSION_NAME,ASSUME_ROLE_SESSION_NAME"},
 		},
-		cli.StringFlag{
-			Name:   "bucket",
-			Usage:  "aws bucket",
-			Value:  "us-east-1",
-			EnvVar: "PLUGIN_BUCKET,S3_BUCKET",
+		&cli.StringFlag{
+			Name:    "bucket",
+			Usage:   "aws bucket",
+			Value:   "us-east-1",
+			EnvVars: []string{"PLUGIN_BUCKET,S3_BUCKET"},
 		},
-		cli.StringFlag{
-			Name:   "region",
-			Usage:  "aws region",
-			Value:  "us-east-1",
-			EnvVar: "PLUGIN_REGION,S3_REGION",
+		&cli.StringFlag{
+			Name:    "region",
+			Usage:   "aws region",
+			Value:   "us-east-1",
+			EnvVars: []string{"PLUGIN_REGION,S3_REGION"},
 		},
-		cli.StringFlag{
-			Name:   "acl",
-			Usage:  "upload files with acl",
-			Value:  "private",
-			EnvVar: "PLUGIN_ACL",
+		&cli.StringFlag{
+			Name:    "acl",
+			Usage:   "upload files with acl",
+			Value:   "private",
+			EnvVars: []string{"PLUGIN_ACL"},
 		},
-		cli.StringFlag{
-			Name:   "source",
-			Usage:  "upload files from source folder",
-			EnvVar: "PLUGIN_SOURCE",
+		&cli.StringFlag{
+			Name:    "source",
+			Usage:   "upload files from source folder",
+			EnvVars: []string{"PLUGIN_SOURCE"},
 		},
-		cli.StringFlag{
-			Name:   "target",
-			Usage:  "upload files to target folder",
-			EnvVar: "PLUGIN_TARGET",
+		&cli.StringFlag{
+			Name:    "target",
+			Usage:   "upload files to target folder",
+			EnvVars: []string{"PLUGIN_TARGET"},
 		},
-		cli.StringFlag{
-			Name:   "strip-prefix",
-			Usage:  "strip the prefix from the target",
-			EnvVar: "PLUGIN_STRIP_PREFIX",
+		&cli.StringFlag{
+			Name:    "strip-prefix",
+			Usage:   "strip the prefix from the target",
+			EnvVars: []string{"PLUGIN_STRIP_PREFIX"},
 		},
-		cli.StringSliceFlag{
-			Name:   "exclude",
-			Usage:  "ignore files matching exclude pattern",
-			EnvVar: "PLUGIN_EXCLUDE",
+		&cli.StringSliceFlag{
+			Name:    "exclude",
+			Usage:   "ignore files matching exclude pattern",
+			EnvVars: []string{"PLUGIN_EXCLUDE"},
 		},
-		cli.StringFlag{
-			Name:   "encryption",
-			Usage:  "server-side encryption algorithm, defaults to none",
-			EnvVar: "PLUGIN_ENCRYPTION",
+		&cli.StringFlag{
+			Name:    "encryption",
+			Usage:   "server-side encryption algorithm, defaults to none",
+			EnvVars: []string{"PLUGIN_ENCRYPTION"},
 		},
-		cli.BoolFlag{
-			Name:   "dry-run",
-			Usage:  "dry run for debug purposes",
-			EnvVar: "PLUGIN_DRY_RUN",
+		&cli.BoolFlag{
+			Name:    "dry-run",
+			Usage:   "dry run for debug purposes",
+			EnvVars: []string{"PLUGIN_DRY_RUN"},
 		},
-		cli.BoolFlag{
-			Name:   "path-style",
-			Usage:  "use path style for bucket paths",
-			EnvVar: "PLUGIN_PATH_STYLE",
+		&cli.BoolFlag{
+			Name:    "path-style",
+			Usage:   "use path style for bucket paths",
+			EnvVars: []string{"PLUGIN_PATH_STYLE"},
 		},
-		cli.GenericFlag{
-			Name:   "content-type",
-			Usage:  "set content type header for uploaded objects",
-			EnvVar: "PLUGIN_CONTENT_TYPE",
-			Value:  &StringMapFlag{},
+		&cli.GenericFlag{
+			Name:    "content-type",
+			Usage:   "set content type header for uploaded objects",
+			EnvVars: []string{"PLUGIN_CONTENT_TYPE"},
+			Value:   &StringMapFlag{},
 		},
-		cli.GenericFlag{
-			Name:   "content-encoding",
-			Usage:  "set content encoding header for uploaded objects",
-			EnvVar: "PLUGIN_CONTENT_ENCODING",
-			Value:  &StringMapFlag{},
+		&cli.GenericFlag{
+			Name:    "content-encoding",
+			Usage:   "set content encoding header for uploaded objects",
+			EnvVars: []string{"PLUGIN_CONTENT_ENCODING"},
+			Value:   &StringMapFlag{},
 		},
-		cli.GenericFlag{
-			Name:   "cache-control",
-			Usage:  "set cache-control header for uploaded objects",
-			EnvVar: "PLUGIN_CACHE_CONTROL",
-			Value:  &StringMapFlag{},
+		&cli.GenericFlag{
+			Name:    "cache-control",
+			Usage:   "set cache-control header for uploaded objects",
+			EnvVars: []string{"PLUGIN_CACHE_CONTROL"},
+			Value:   &StringMapFlag{},
 		},
-		cli.StringFlag{
-			Name:   "storage-class",
-			Usage:  "set storage class to choose the best backend",
-			EnvVar: "PLUGIN_STORAGE_CLASS",
+		&cli.StringFlag{
+			Name:    "storage-class",
+			Usage:   "set storage class to choose the best backend",
+			EnvVars: []string{"PLUGIN_STORAGE_CLASS"},
 		},
-		cli.StringFlag{
+		&cli.StringFlag{
 			Name:  "env-file",
 			Usage: "source env file",
 		},
