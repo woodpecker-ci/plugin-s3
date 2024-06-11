@@ -1,13 +1,15 @@
 # Changelog
 
-## [1.1.4](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.1.4) - 2024-06-10
+## [1.1.4](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.1.4) - 2024-06-11
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@qwerty287
+@pat-s, @qwerty287
 
 ### Misc
 
+- Fix depends_on in workflow [[#183](https://github.com/woodpecker-ci/plugin-s3/pull/183)]
+- Align publish workflow with other plugins [[#182](https://github.com/woodpecker-ci/plugin-s3/pull/182)]
 - chore(deps): update pre-commit hook golangci/golangci-lint to v1.59.1 [[#181](https://github.com/woodpecker-ci/plugin-s3/pull/181)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.53.19 [[#180](https://github.com/woodpecker-ci/plugin-s3/pull/180)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.53.18 [[#179](https://github.com/woodpecker-ci/plugin-s3/pull/179)]
