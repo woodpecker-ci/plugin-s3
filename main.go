@@ -123,7 +123,7 @@ func main() {
 			Name:  "env-file",
 			Usage: "source env file",
 		},
-		cli.BoolFlag{
+		&cli.BoolFlag{
 			Name:    "compress",
 			Usage:   "prior to upload, compress files and use gzip content-encoding",
 			EnvVars: []string{"PLUGIN_COMPRESS"},
