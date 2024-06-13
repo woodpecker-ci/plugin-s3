@@ -22,7 +22,6 @@ depends_on: [test]
 steps:
   publish:
     image: *build_plugin
-    depends_on: test
     settings:
       <<: *base_buildx_settings
       logins: *login_setting
