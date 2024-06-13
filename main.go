@@ -120,8 +120,9 @@ func main() {
 			EnvVars: []string{"PLUGIN_STORAGE_CLASS"},
 		},
 		&cli.StringFlag{
-			Name:  "env-file",
-			Usage: "source env file",
+			Name:    "env-file",
+			Usage:   "source env file",
+			EnvVars: []string{"PLUGIN_ENV_FILE"},
 		},
 	}
 
