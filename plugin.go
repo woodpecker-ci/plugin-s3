@@ -215,7 +215,7 @@ func (p *Plugin) Exec() error {
 			putObjectInput.StorageClass = &(p.StorageClass)
 		}
 
-		//optionally compress
+		// optionally compress
 		if p.Compress {
 			gr, err := gzip.NewReader(f)
 			if err != nil {
@@ -225,15 +225,15 @@ func (p *Plugin) Exec() error {
 				}).Error("Problem gzipping file")
 				return err
 			}
-			//wrap with gzip
+			// wrap with gzip
 			putObjectInput.Body = &gzipReadSeeker{rs: f, z: gr}
-			//set encoding
+			// set encoding
 			putObjectInput.ContentEncoding = aws.String("gzip")
 		} else {
 			putObjectInput.Body = f
 		}
 
-		//upload
+		// upload
 		_, err = client.PutObject(putObjectInput)
 
 		if err != nil {
@@ -252,7 +252,7 @@ func (p *Plugin) Exec() error {
 	return nil
 }
 
-//gzipReadSeeker implements Seek over gzip.Reader
+// gzipReadSeeker implements Seek over gzip.Reader
 type gzipReadSeeker struct {
 	rs io.ReadSeeker
 	z  *gzip.Reader
@@ -263,8 +263,8 @@ func (grs *gzipReadSeeker) Read(p []byte) (n int, err error) {
 }
 
 func (grs *gzipReadSeeker) Seek(offset int64, whence int) (int64, error) {
-	//only zero (reset) seeks are supported, in this case, this should be fine
-	//since AWS will rarely seek mid-file
+	// only zero (reset) seeks are supported, in this case, this should be fine
+	// since AWS will rarely seek mid-file
 	if offset == 0 && whence == 0 {
 		if err := grs.z.Reset(grs.rs); err != nil {
 			return 0, err
