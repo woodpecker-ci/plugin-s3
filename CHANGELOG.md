@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.4](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.1.4) - 2024-06-12
+## [1.1.4](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.1.4) - 2024-06-13
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -8,6 +8,7 @@
 
 ### Misc
 
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.54.0 [[#185](https://github.com/woodpecker-ci/plugin-s3/pull/185)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.53.21 [[#184](https://github.com/woodpecker-ci/plugin-s3/pull/184)]
 - Fix depends_on in workflow [[#183](https://github.com/woodpecker-ci/plugin-s3/pull/183)]
 - Align publish workflow with other plugins [[#182](https://github.com/woodpecker-ci/plugin-s3/pull/182)]
