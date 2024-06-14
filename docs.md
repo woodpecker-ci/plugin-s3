@@ -146,3 +146,6 @@ exclude
 
 path_style
 : whether path style URLs should be used (true for minio)
+
+env_file
+: load env vars from file
