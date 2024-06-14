@@ -4,10 +4,11 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@pat-s, @qwerty287
+@6543, @pat-s, @qwerty287
 
 ### 📈 Enhancement
 
+- implement optional gzip compression [[#9](https://github.com/woodpecker-ci/plugin-s3/pull/9)]
 - Support env file [[#186](https://github.com/woodpecker-ci/plugin-s3/pull/186)]
 
 ### Misc
