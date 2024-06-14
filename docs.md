@@ -148,5 +148,8 @@ exclude
 path_style
 : whether path style URLs should be used (true for minio)
 
+env_file
+: load env vars from file
+
 compress
 : prior to upload, compress files and use gzip content-encoding (false by default)
