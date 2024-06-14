@@ -1,10 +1,14 @@
 # Changelog
 
-## [1.1.4](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.1.4) - 2024-06-13
+## [1.2.0](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.0) - 2024-06-14
 
 ### ❤️ Thanks to all contributors! ❤️
 
 @pat-s, @qwerty287
+
+### 📈 Enhancement
+
+- Support env file [[#186](https://github.com/woodpecker-ci/plugin-s3/pull/186)]
 
 ### Misc
 
