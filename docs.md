@@ -15,7 +15,7 @@ The S3 plugin uploads files and build artifacts to your S3 bucket, or S3-compati
 The below pipeline configuration demonstrates simple usage:
 
 ```yml
-pipeline:
+steps:
   upload:
     image: woodpeckerci/plugin-s3
     settings:
@@ -29,7 +29,7 @@ pipeline:
 Source the aws credentials from secrets:
 
 ```yml
-pipeline:
+steps:
   upload:
     image: woodpeckerci/plugin-s3
     settings:
@@ -45,7 +45,7 @@ pipeline:
 Use the build number in the S3 target prefix:
 
 ```yml
-pipeline:
+steps:
   upload:
     image: woodpeckerci/plugin-s3
     settings:
@@ -71,7 +71,7 @@ steps:
 Configure the plugin to strip path prefixes when uploading:
 
 ```yml
-pipeline:
+steps:
   upload:
     image: woodpeckerci/plugin-s3
     settings:
@@ -84,7 +84,7 @@ pipeline:
 Configure the plugin to exclude files from upload and compress:
 
 ```yml
-pipeline:
+steps:
   upload:
     image: woodpeckerci/plugin-s3
     settings:
@@ -99,7 +99,7 @@ pipeline:
 Configure the plugin to connect to a Minio server:
 
 ```yml
-pipeline:
+steps:
   upload:
     image: woodpeckerci/plugin-s3
     settings:
