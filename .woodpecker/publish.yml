@@ -16,9 +16,6 @@ when:
   - event: push
     branch:
       - ${CI_REPO_DEFAULT_BRANCH}
-
-depends_on: [test]
-
 steps:
   publish:
     image: *build_plugin
