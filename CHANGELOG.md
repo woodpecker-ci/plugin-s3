@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.1) - 2024-06-17
+
+### ❤️ Thanks to all contributors! ❤️
+
+@6543
+
+### 🐛 Bug Fixes
+
+- Update docs to reflect current pipeline config [[#188](https://github.com/woodpecker-ci/plugin-s3/pull/188)]
+
+### Misc
+
+- Fix remove dependency of "publish" workflow [[#190](https://github.com/woodpecker-ci/plugin-s3/pull/190)]
+
 ## [1.2.0](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.0) - 2024-06-14
 
 ### ❤️ Thanks to all contributors! ❤️
