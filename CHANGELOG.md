@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.2.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.1) - 2024-06-17
+## [1.2.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.1) - 2024-06-18
 
 ### ❤️ Thanks to all contributors! ❤️
 
@@ -12,6 +12,7 @@
 
 ### Misc
 
+- golang vendor dependencys once to not timeout [[#192](https://github.com/woodpecker-ci/plugin-s3/pull/192)]
 - Add nix flake [[#187](https://github.com/woodpecker-ci/plugin-s3/pull/187)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.54.2 [[#189](https://github.com/woodpecker-ci/plugin-s3/pull/189)]
 - Fix remove dependency of "publish" workflow [[#190](https://github.com/woodpecker-ci/plugin-s3/pull/190)]
