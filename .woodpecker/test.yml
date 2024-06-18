@@ -7,20 +7,27 @@ when:
     branch: "renovate/*"
 
 steps:
+  vendor:
+    image: *golang
+    commands:
+      - go mod vendor
+
   lint:
     image: *golang
+    depends_on: [ vendor ]
     commands:
       - make vet
       - make formatcheck
 
   test:
     image: *golang
+    depends_on: [ vendor ]
     commands:
       - make test
 
   build:
     image: woodpeckerci/plugin-docker-buildx:4.0.0
-    depends_on: [ lint, test ]
+    depends_on: [ lint, test, vendor ]
     settings:
       dockerfile: Dockerfile.multiarch
       dry_run: true
