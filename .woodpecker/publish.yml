@@ -1,4 +1,5 @@
 variables:
+  - &golang 'golang:1.22'
   - &build_plugin 'woodpeckerci/plugin-docker-buildx:4.0.0'
   - base_settings: &base_buildx_settings
       platforms: 'linux/arm/v7,linux/arm64/v8,linux/amd64,linux/ppc64le,windows/amd64,darwin/amd64,darwin/arm64,freebsd/arm64,freebsd/amd64,openbsd/arm64,openbsd/amd64'
@@ -16,9 +17,16 @@ when:
   - event: push
     branch:
       - ${CI_REPO_DEFAULT_BRANCH}
+
 steps:
+  vendor:
+    image: *golang
+    commands:
+      - go mod vendor
+
   publish:
     image: *build_plugin
+    depends_on: [ vendor ]
     settings:
       <<: *base_buildx_settings
       logins: *login_setting
