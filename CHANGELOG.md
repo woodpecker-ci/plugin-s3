@@ -1,13 +1,14 @@
 # Changelog
 
-## [1.2.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.1) - 2024-06-18
+## [1.2.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.1) - 2024-06-19
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@6543
+@6543, @lafriks
 
 ### 🐛 Bug Fixes
 
+- Fix typo in docker image names [[#194](https://github.com/woodpecker-ci/plugin-s3/pull/194)]
 - Update docs to reflect current pipeline config [[#188](https://github.com/woodpecker-ci/plugin-s3/pull/188)]
 
 ### Misc
