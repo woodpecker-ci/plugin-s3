@@ -5,7 +5,7 @@ variables:
       platforms: 'linux/arm/v7,linux/arm64/v8,linux/amd64,linux/ppc64le,windows/amd64,darwin/amd64,darwin/arm64,freebsd/arm64,freebsd/amd64,openbsd/arm64,openbsd/amd64'
       dockerfile: Dockerfile.multiarch
       auto_tag: true
-      repo: woodpeckerci/plugin-s3,codeberg.org/woodpecker-plugins/s3
+      repo: woodpeckerci/plugin-s3
   - &login_setting # Default DockerHub login
     - registry: https://index.docker.io/v1/
       username: woodpeckerbot
