@@ -4,7 +4,7 @@
 
 ### ❤️ Thanks to all contributors! ❤️
 
-@6543, @lafriks
+@6543, @lafriks, @pat-s
 
 ### 🐛 Bug Fixes
 
@@ -13,6 +13,7 @@
 
 ### Misc
 
+- Publish to docker hub only [[#195](https://github.com/woodpecker-ci/plugin-s3/pull/195)]
 - golang vendor dependencys once to not timeout [[#192](https://github.com/woodpecker-ci/plugin-s3/pull/192)]
 - Add nix flake [[#187](https://github.com/woodpecker-ci/plugin-s3/pull/187)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.54.2 [[#189](https://github.com/woodpecker-ci/plugin-s3/pull/189)]
