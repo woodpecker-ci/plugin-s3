@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.2.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.1) - 2024-06-19
+
+### ❤️ Thanks to all contributors! ❤️
+
+@6543, @lafriks, @pat-s
+
+### 🐛 Bug Fixes
+
+- Fix typo in docker image names [[#194](https://github.com/woodpecker-ci/plugin-s3/pull/194)]
+- Update docs to reflect current pipeline config [[#188](https://github.com/woodpecker-ci/plugin-s3/pull/188)]
+
+### Misc
+
+- Publish to docker hub only [[#195](https://github.com/woodpecker-ci/plugin-s3/pull/195)]
+- golang vendor dependencys once to not timeout [[#192](https://github.com/woodpecker-ci/plugin-s3/pull/192)]
+- Add nix flake [[#187](https://github.com/woodpecker-ci/plugin-s3/pull/187)]
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.54.2 [[#189](https://github.com/woodpecker-ci/plugin-s3/pull/189)]
+- Fix remove dependency of "publish" workflow [[#190](https://github.com/woodpecker-ci/plugin-s3/pull/190)]
+
 ## [1.2.0](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.0) - 2024-06-14
 
 ### ❤️ Thanks to all contributors! ❤️
