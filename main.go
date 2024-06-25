@@ -20,40 +20,40 @@ func main() {
 		&cli.StringFlag{
 			Name:    "endpoint",
 			Usage:   "endpoint for the s3 connection",
-			EnvVars: []string{"PLUGIN_ENDPOINT,S3_ENDPOINT"},
+			EnvVars: []string{"PLUGIN_ENDPOINT", "S3_ENDPOINT"},
 		},
 		&cli.StringFlag{
 			Name:    "access-key",
 			Usage:   "aws access key",
-			EnvVars: []string{"PLUGIN_ACCESS_KEY,AWS_ACCESS_KEY_ID"},
+			EnvVars: []string{"PLUGIN_ACCESS_KEY", "AWS_ACCESS_KEY_ID"},
 		},
 		&cli.StringFlag{
 			Name:    "secret-key",
 			Usage:   "aws secret key",
-			EnvVars: []string{"PLUGIN_SECRET_KEY,AWS_SECRET_ACCESS_KEY"},
+			EnvVars: []string{"PLUGIN_SECRET_KEY", "AWS_SECRET_ACCESS_KEY"},
 		},
 		&cli.StringFlag{
 			Name:    "assume-role",
 			Usage:   "aws iam role to assume",
-			EnvVars: []string{"PLUGIN_ASSUME_ROLE,ASSUME_ROLE"},
+			EnvVars: []string{"PLUGIN_ASSUME_ROLE", "ASSUME_ROLE"},
 		},
 		&cli.StringFlag{
 			Name:    "assume-role-session-name",
 			Usage:   "aws iam role session name to assume",
 			Value:   "woodpecker-s3",
-			EnvVars: []string{"PLUGIN_ASSUME_ROLE_SESSION_NAME,ASSUME_ROLE_SESSION_NAME"},
+			EnvVars: []string{"PLUGIN_ASSUME_ROLE_SESSION_NAME", "ASSUME_ROLE_SESSION_NAME"},
 		},
 		&cli.StringFlag{
 			Name:    "bucket",
 			Usage:   "aws bucket",
 			Value:   "us-east-1",
-			EnvVars: []string{"PLUGIN_BUCKET,S3_BUCKET"},
+			EnvVars: []string{"PLUGIN_BUCKET", "S3_BUCKET"},
 		},
 		&cli.StringFlag{
 			Name:    "region",
 			Usage:   "aws region",
 			Value:   "us-east-1",
-			EnvVars: []string{"PLUGIN_REGION,S3_REGION"},
+			EnvVars: []string{"PLUGIN_REGION", "S3_REGION"},
 		},
 		&cli.StringFlag{
 			Name:    "acl",
@@ -129,6 +129,11 @@ func main() {
 			Usage:   "prior to upload, compress files and use gzip content-encoding",
 			EnvVars: []string{"PLUGIN_COMPRESS"},
 		},
+		&cli.BoolFlag{
+			Name:    "overwrite",
+			Usage:   "overwrite existing files",
+			EnvVars: []string{"PLUGIN_OVERWRITE"},
+		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
@@ -162,6 +167,7 @@ func run(c *cli.Context) error {
 		PathStyle:             c.Bool("path-style"),
 		DryRun:                c.Bool("dry-run"),
 		Compress:              c.Bool("compress"),
+		Overwrite:             c.Bool("overwrite"),
 	}
 
 	return plugin.Exec()
