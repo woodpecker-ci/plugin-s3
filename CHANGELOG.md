@@ -1,14 +1,18 @@
 # Changelog
 
-## [1.2.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.2) - 2024-06-25
+## [1.2.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.2) - 2024-07-04
 
 ### ❤️ Thanks to all contributors! ❤️
 
 @pat-s
 
-### Misc
+### 🐛 Bug Fixes
 
 - Fix env var parsing with urfave/cli v2 [[#198](https://github.com/woodpecker-ci/plugin-s3/pull/198)]
+
+### Misc
+
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.54.14 [[#200](https://github.com/woodpecker-ci/plugin-s3/pull/200)]
 - fix(deps): update module github.com/aws/aws-sdk-go to v1.54.6 [[#196](https://github.com/woodpecker-ci/plugin-s3/pull/196)]
 
 ## [1.2.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.1) - 2024-06-19
