@@ -12,7 +12,6 @@ import (
 	"time"
 
 	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/credentials/stscreds"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -200,68 +199,63 @@ func (p *Plugin) Exec() error {
 		_, err = client.HeadObject(headObjectInput)
 		if err != nil {
 			// If the error indicates the object does not exist, upload the file
-			if aerr, ok := err.(awserr.Error); ok && aerr.Code() == s3.ErrCodeNoSuchKey {
+			if contentType != "" {
+				putObjectInput.ContentType = aws.String(contentType)
+			}
 
-				if contentType != "" {
-					putObjectInput.ContentType = aws.String(contentType)
+			if contentEncoding != "" {
+				putObjectInput.ContentEncoding = aws.String(contentEncoding)
+			}
+
+			if cacheControl != "" {
+				putObjectInput.CacheControl = aws.String(cacheControl)
+			}
+
+			if p.Encryption != "" {
+				putObjectInput.ServerSideEncryption = aws.String(p.Encryption)
+			}
+
+			if p.StorageClass != "" {
+				putObjectInput.StorageClass = &(p.StorageClass)
+			}
+
+			// optionally compress
+			if p.Compress {
+				gr, err := gzip.NewReader(f)
+				if err != nil {
+					log.WithFields(log.Fields{
+						"error": err,
+						"file":  match,
+					}).Error("Problem gzipping file")
+					return err
 				}
+				// wrap with gzip
+				putObjectInput.Body = &gzipReadSeeker{rs: f, z: gr}
+				// set encoding
+				putObjectInput.ContentEncoding = aws.String("gzip")
+			} else {
+				putObjectInput.Body = f
+			}
 
-				if contentEncoding != "" {
-					putObjectInput.ContentEncoding = aws.String(contentEncoding)
-				}
+			// Upload the object
+			log.WithFields(log.Fields{
+				"name":   match,
+				"bucket": p.Bucket,
+				"target": target,
+			}).Info("Uploading file")
 
-				if cacheControl != "" {
-					putObjectInput.CacheControl = aws.String(cacheControl)
-				}
+			// do upload
+			_, err = client.PutObject(putObjectInput)
 
-				if p.Encryption != "" {
-					putObjectInput.ServerSideEncryption = aws.String(p.Encryption)
-				}
-
-				if p.StorageClass != "" {
-					putObjectInput.StorageClass = &(p.StorageClass)
-				}
-
-				// optionally compress
-				if p.Compress {
-					gr, err := gzip.NewReader(f)
-					if err != nil {
-						log.WithFields(log.Fields{
-							"error": err,
-							"file":  match,
-						}).Error("Problem gzipping file")
-						return err
-					}
-					// wrap with gzip
-					putObjectInput.Body = &gzipReadSeeker{rs: f, z: gr}
-					// set encoding
-					putObjectInput.ContentEncoding = aws.String("gzip")
-				} else {
-					putObjectInput.Body = f
-				}
-
-				// Upload the object
+			if err != nil {
 				log.WithFields(log.Fields{
 					"name":   match,
 					"bucket": p.Bucket,
 					"target": target,
-				}).Info("Uploading file")
+					"error":  err,
+				}).Error("Could not upload file")
 
-				// do upload
-				_, err = client.PutObject(putObjectInput)
-
-				if err != nil {
-					log.WithFields(log.Fields{
-						"name":   match,
-						"bucket": p.Bucket,
-						"target": target,
-						"error":  err,
-					}).Error("Could not upload file")
-
-					return err
-				}
-			} else {
-				// Handle other errors
+				return err
 			}
 		} else {
 
