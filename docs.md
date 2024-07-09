@@ -153,3 +153,6 @@ env_file
 
 compress
 : prior to upload, compress files and use gzip content-encoding (false by default)
+
+overwrite
+: overwrite existing files (true by default)

@@ -129,6 +129,11 @@ func main() {
 			Usage:   "prior to upload, compress files and use gzip content-encoding",
 			EnvVars: []string{"PLUGIN_COMPRESS"},
 		},
+		&cli.BoolFlag{
+			Name:    "overwrite",
+			Usage:   "overwrite existing files",
+			EnvVars: []string{"PLUGIN_OVERWRITE"},
+		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
@@ -162,6 +167,7 @@ func run(c *cli.Context) error {
 		PathStyle:             c.Bool("path-style"),
 		DryRun:                c.Bool("dry-run"),
 		Compress:              c.Bool("compress"),
+		Overwrite:             c.Bool("overwrite"),
 	}
 
 	return plugin.Exec()
