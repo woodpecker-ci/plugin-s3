@@ -1,10 +1,14 @@
 # Changelog
 
-## [1.2.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.2) - 2024-07-04
+## [1.3.0](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.0) - 2024-07-09
 
 ### ❤️ Thanks to all contributors! ❤️
 
 @pat-s
+
+### 📈 Enhancement
+
+- Support skipping upload if file already exists [[#201](https://github.com/woodpecker-ci/plugin-s3/pull/201)]
 
 ### 🐛 Bug Fixes
 
