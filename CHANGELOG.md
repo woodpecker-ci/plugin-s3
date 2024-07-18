@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.3.0](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.0) - 2024-07-18
+
+### ❤️ Thanks to all contributors! ❤️
+
+@6543, @pat-s
+
+### 📈 Enhancement
+
+- Support skipping upload if file already exists [[#201](https://github.com/woodpecker-ci/plugin-s3/pull/201)]
+
+### 🐛 Bug Fixes
+
+- Fix env var parsing with urfave/cli v2 [[#198](https://github.com/woodpecker-ci/plugin-s3/pull/198)]
+
+### Misc
+
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.54.20 [[#203](https://github.com/woodpecker-ci/plugin-s3/pull/203)]
+
 ## [1.2.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.2.1) - 2024-06-19
 
 ### ❤️ Thanks to all contributors! ❤️
