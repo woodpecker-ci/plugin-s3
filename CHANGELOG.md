@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.3.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.1) - 2024-08-06
+## [1.3.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.1) - 2024-08-07
 
 ### Misc
 
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v1.2.0 [[#207](https://github.com/woodpecker-ci/plugin-s3/pull/207)]
 - [pre-commit.ci] pre-commit autoupdate [[#206](https://github.com/woodpecker-ci/plugin-s3/pull/206)]
 - chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v4.2.0 [[#204](https://github.com/woodpecker-ci/plugin-s3/pull/204)]
 
