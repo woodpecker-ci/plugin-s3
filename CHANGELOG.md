@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.3.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.1) - 2024-08-22
+## [1.3.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.1) - 2024-09-03
 
 ### Misc
 
+- [pre-commit.ci] pre-commit autoupdate [[#211](https://github.com/woodpecker-ci/plugin-s3/pull/211)]
 - fix(deps): update golang deps non-major [[#210](https://github.com/woodpecker-ci/plugin-s3/pull/210)]
 - chore(deps): update golang docker tag to v1.23 [[#208](https://github.com/woodpecker-ci/plugin-s3/pull/208)]
 - chore(deps): update pre-commit hook golangci/golangci-lint to v1.60.2 [[#209](https://github.com/woodpecker-ci/plugin-s3/pull/209)]
