@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.3.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.1) - 2024-09-03
+## [1.3.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.1) - 2024-09-04
 
 ### Misc
 
+- fix(deps): update module github.com/mattn/go-zglob to v0.0.6 [[#212](https://github.com/woodpecker-ci/plugin-s3/pull/212)]
 - [pre-commit.ci] pre-commit autoupdate [[#211](https://github.com/woodpecker-ci/plugin-s3/pull/211)]
 - fix(deps): update golang deps non-major [[#210](https://github.com/woodpecker-ci/plugin-s3/pull/210)]
 - chore(deps): update golang docker tag to v1.23 [[#208](https://github.com/woodpecker-ci/plugin-s3/pull/208)]
