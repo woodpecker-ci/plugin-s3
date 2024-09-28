@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.2) - 2024-09-28
+
+### 📦️ Dependency
+
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v2 [[#213](https://github.com/woodpecker-ci/plugin-s3/pull/213)]
+
 ## [1.3.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.1) - 2024-09-04
 
 ### Misc
