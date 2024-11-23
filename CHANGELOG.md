@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.3.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.2) - 2024-10-12
+## [1.3.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.2) - 2024-11-23
 
 ### 📦️ Dependency
 
+- fix(deps): update module github.com/urfave/cli/v2 to v2.27.5 [[#218](https://github.com/woodpecker-ci/plugin-s3/pull/218)]
 - chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v5 [[#217](https://github.com/woodpecker-ci/plugin-s3/pull/217)]
 - chore(deps): update pre-commit hook pre-commit/pre-commit-hooks to v5 [[#215](https://github.com/woodpecker-ci/plugin-s3/pull/215)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v2 [[#213](https://github.com/woodpecker-ci/plugin-s3/pull/213)]
