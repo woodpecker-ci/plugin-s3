@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.3.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.2) - 2024-11-23
+## [1.3.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.2) - 2024-11-25
 
 ### 📦️ Dependency
 
+- chore(deps): update pre-commit non-major [[#221](https://github.com/woodpecker-ci/plugin-s3/pull/221)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v2.1.1 [[#220](https://github.com/woodpecker-ci/plugin-s3/pull/220)]
 - chore(deps): update pre-commit hook golangci/golangci-lint to v1.62.0 [[#219](https://github.com/woodpecker-ci/plugin-s3/pull/219)]
 - fix(deps): update module github.com/urfave/cli/v2 to v2.27.5 [[#218](https://github.com/woodpecker-ci/plugin-s3/pull/218)]
