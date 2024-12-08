@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v3.1.0 [[#224](https://github.com/woodpecker-ci/plugin-s3/pull/224)]
 - chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v5.1.0 [[#223](https://github.com/woodpecker-ci/plugin-s3/pull/223)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v3 [[#222](https://github.com/woodpecker-ci/plugin-s3/pull/222)]
 - chore(deps): update pre-commit non-major [[#221](https://github.com/woodpecker-ci/plugin-s3/pull/221)]
