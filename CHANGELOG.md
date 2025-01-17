@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.3.2](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.2) - 2025-01-17
+
+### 📦️ Dependency
+
+- fix(deps): update module github.com/aws/aws-sdk-go to v1.55.6 [[#227](https://github.com/woodpecker-ci/plugin-s3/pull/227)]
+- chore(deps): update pre-commit hook golangci/golangci-lint to v1.63.4 [[#226](https://github.com/woodpecker-ci/plugin-s3/pull/226)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v3.1.1 [[#225](https://github.com/woodpecker-ci/plugin-s3/pull/225)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v3.1.0 [[#224](https://github.com/woodpecker-ci/plugin-s3/pull/224)]
+- chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v5.1.0 [[#223](https://github.com/woodpecker-ci/plugin-s3/pull/223)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v3 [[#222](https://github.com/woodpecker-ci/plugin-s3/pull/222)]
+- chore(deps): update pre-commit non-major [[#221](https://github.com/woodpecker-ci/plugin-s3/pull/221)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v2.1.1 [[#220](https://github.com/woodpecker-ci/plugin-s3/pull/220)]
+- chore(deps): update pre-commit hook golangci/golangci-lint to v1.62.0 [[#219](https://github.com/woodpecker-ci/plugin-s3/pull/219)]
+- fix(deps): update module github.com/urfave/cli/v2 to v2.27.5 [[#218](https://github.com/woodpecker-ci/plugin-s3/pull/218)]
+- chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v5 [[#217](https://github.com/woodpecker-ci/plugin-s3/pull/217)]
+- chore(deps): update pre-commit hook pre-commit/pre-commit-hooks to v5 [[#215](https://github.com/woodpecker-ci/plugin-s3/pull/215)]
+- chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v2 [[#213](https://github.com/woodpecker-ci/plugin-s3/pull/213)]
+
+### Misc
+
+- [pre-commit.ci] pre-commit autoupdate [[#216](https://github.com/woodpecker-ci/plugin-s3/pull/216)]
+
 ## [1.3.1](https://github.com/woodpecker-ci/plugin-s3/releases/tag/v1.3.1) - 2024-09-04
 
 ### Misc
