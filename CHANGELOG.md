@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v5.2.0 [[#231](https://github.com/woodpecker-ci/plugin-s3/pull/231)]
 - chore(deps): update pre-commit hook igorshubovych/markdownlint-cli to v0.44.0 [[#229](https://github.com/woodpecker-ci/plugin-s3/pull/229)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v3.1.3 [[#228](https://github.com/woodpecker-ci/plugin-s3/pull/228)]
 
