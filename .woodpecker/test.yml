@@ -1,5 +1,5 @@
 variables:
-  - &golang 'golang:1.23'
+  - &golang 'golang:1.24'
 
 when:
   - event: pull_request
