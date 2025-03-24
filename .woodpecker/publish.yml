@@ -1,6 +1,6 @@
 variables:
   - &golang 'golang:1.24'
-  - &build_plugin 'woodpeckerci/plugin-docker-buildx:5.2.1'
+  - &build_plugin 'woodpeckerci/plugin-docker-buildx:5.2.2'
   - base_settings: &base_buildx_settings
       platforms: 'linux/arm/v7,linux/arm64/v8,linux/amd64,linux/ppc64le,windows/amd64,darwin/amd64,darwin/arm64,freebsd/arm64,freebsd/amd64,openbsd/arm64,openbsd/amd64'
       dockerfile: Dockerfile.multiarch
