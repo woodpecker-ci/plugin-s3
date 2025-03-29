@@ -4,6 +4,7 @@
 
 ### 📦️ Dependency
 
+- chore(deps): update pre-commit hook golangci/golangci-lint to v2 [[#241](https://github.com/woodpecker-ci/plugin-s3/pull/241)]
 - chore(deps): update woodpeckerci/plugin-ready-release-go docker tag to v3.1.4 [[#240](https://github.com/woodpecker-ci/plugin-s3/pull/240)]
 - chore(deps): update woodpeckerci/plugin-docker-buildx docker tag to v5.2.2 [[#239](https://github.com/woodpecker-ci/plugin-s3/pull/239)]
 - chore(deps): update pre-commit hook golangci/golangci-lint to v1.64.8 [[#238](https://github.com/woodpecker-ci/plugin-s3/pull/238)]
